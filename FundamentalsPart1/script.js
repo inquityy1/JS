@@ -153,7 +153,7 @@ console.log('string with \n\ multiple \n\ lines');
 console.log(`string
 multiple
 lines`);
-*/
+
 // first example
 const age = 15;
 
@@ -175,6 +175,37 @@ if(birthYear <= 2000) {
 	century = 21;
 }
 console.log(century);
+*/
+
+const johnsMassBefore = 92;
+const johnsMassAfter = 85;
+const johnsHeightBefore = 1.95;
+const johnsHeightAfter = 1.76;
+
+const marksMassBefore = 78;
+const marksMassAfter = 95;
+const marksHeightBefore = 1.69;
+const marksHeightAfter = 1.88;
+
+const johnsFirstTestBMI = (johnsMassBefore / johnsHeightBefore ** 2).toFixed(1);
+const johnsSecondTestBMI = (johnsMassAfter / (johnsHeightAfter * johnsHeightAfter)).toFixed(1);
+
+const marksFirstTestBMI = (marksMassBefore / marksHeightBefore ** 2).toFixed(1);
+const marksSecondTestBMI = (marksMassAfter / (marksHeightAfter * marksHeightAfter)).toFixed(2);
+
+if (johnsFirstTestBMI > marksFirstTestBMI) {
+console.log(`Jhons first test BMI ${johnsFirstTestBMI} is higher than Marks ${marksFirstTestBMI}`);
+} else {
+	console.log(`Jhons first test BMI ${johnsFirstTestBMI} is lower than Marks ${marksFirstTestBMI}`);
+}
+
+if (johnsSecondTestBMI > marksSecondTestBMI) {
+	console.log(`Jhons second test BMI ${johnsFirstTestBMI} is higher than Marks ${marksFirstTestBMI}`);
+} else {
+	console.log(`Jhons second test BMI ${johnsFirstTestBMI} is lower than Marks ${marksFirstTestBMI}`);
+}
+
+
 
 
 
