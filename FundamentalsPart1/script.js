@@ -175,7 +175,7 @@ if(birthYear <= 2000) {
 	century = 21;
 }
 console.log(century);
-*/
+
 
 const johnsMassBefore = 92;
 const johnsMassAfter = 85;
@@ -204,7 +204,19 @@ if (johnsSecondTestBMI > marksSecondTestBMI) {
 } else {
 	console.log(`Jhons second test BMI ${johnsFirstTestBMI} is lower than Marks ${marksFirstTestBMI}`);
 }
+*/
 
+// type conversion
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+console.log(Number('Jonas'));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+//type coercion
 
 
 
