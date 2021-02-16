@@ -154,7 +154,7 @@ console.log(`string
 multiple
 lines`);
 */
-
+// first example
 const age = 15;
 
 if(age >= 18) {
@@ -165,7 +165,16 @@ if(age >= 18) {
 }
 
 
+// second example
+const birthYear = 2028;
 
+let century;
+if(birthYear <= 2000) {
+	century = 20;
+} else {
+	century = 21;
+}
+console.log(century);
 
 
 
