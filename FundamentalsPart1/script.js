@@ -25,12 +25,13 @@ let job1 = 'programmer';
 let job2 = 'teacher';
 
 console.log(myFirstJob);
-*/
+
 
 // Booleans
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
+// Typeof
 console.log(typeof true);
 console.log(typeof javascriptIsFun);
 console.log(typeof 23);
@@ -49,6 +50,21 @@ console.log(typeof year);
 
 // null is not an object its bug :3
 console.log(typeof null);
+*/
+
+let age = 30;
+age = 31;
+
+const birthYear = 1991;
+//birthYear = 1990;
+//const job;
+
+var job = 'programmer';
+job = 'teacher';
+
+lastName = 'Nikolic';
+console.log(lastName);
+
 
 
 
