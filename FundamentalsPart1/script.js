@@ -135,7 +135,7 @@ const secondTestComparisonBMI = johnsSecondTestBMI > marksSecondTestBMI;
 console.log(johnsFirstTestBMI, johnsSecondTestBMI);
 console.log(marksFirstTestBMI, marksSecondTestBMI);
 console.log(firstTestComparisonBMI, secondTestComparisonBMI);
-*/
+
 
 const firstName = 'Jonas';
 const job = 'teacher';
@@ -153,6 +153,18 @@ console.log('string with \n\ multiple \n\ lines');
 console.log(`string
 multiple
 lines`);
+*/
+
+const age = 15;
+
+if(age >= 18) {
+	console.log('Sarah can start drivin license :3');
+} else {
+	const yearsLeft = 18 - age;
+	console.log(`Sarah is too young. Wait another ${yearsLeft} years :/`);
+}
+
+
 
 
 
