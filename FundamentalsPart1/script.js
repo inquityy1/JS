@@ -111,7 +111,7 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
-*/
+
 
 const johnsMassBefore = 92;
 const johnsMassAfter = 85;
@@ -135,7 +135,24 @@ const secondTestComparisonBMI = johnsSecondTestBMI > marksSecondTestBMI;
 console.log(johnsFirstTestBMI, johnsSecondTestBMI);
 console.log(marksFirstTestBMI, marksSecondTestBMI);
 console.log(firstTestComparisonBMI, secondTestComparisonBMI);
+*/
 
+const firstName = 'Jonas';
+const job = 'teacher';
+const birthYear = 1991;
+const year = 2037;
+
+const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' years old ' + job + '!';
+console.log(jonas);
+
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(jonasNew);
+
+console.log('string with \n\ multiple \n\ lines');
+
+console.log(`string
+multiple
+lines`);
 
 
 
