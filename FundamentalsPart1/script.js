@@ -298,9 +298,9 @@ if(hasDriversLicense && hasGoodVision && !isTired) {
 } else {
 	console.log('Some else should drive...');
 }
-*/
 
-/*const dolphinsScore = (96 + 108 + 89) / 3;
+
+const dolphinsScore = (96 + 108 + 89) / 3;
 const koalasScore = (88 + 91 + 110) / 3;
 console.log(dolphinsScore, koalasScore);
 
@@ -310,7 +310,7 @@ if (dolphinsScore > koalasScore) {
 	console.log('koalas won');
 } else {
 	console.log('draw');
-}*/
+}
 
 
 const dolphinsScore = (272 + 112 + 101) / 3;
@@ -324,7 +324,18 @@ if (dolphinsScore > koalasScore && dolphinsScore >= 100) {
 } else {
 	console.log('draw');
 }
+*/
 
+
+const dolphinsScore = (97 + 112 + 81) / 3;
+const koalasScore = (109 + 95 + 86) / 3;
+console.log(dolphinsScore, koalasScore);
+
+if (dolphinsScore === koalasScore && dolphinsScore >= 100 && koalasScore >= 100) {
+	console.log('draw');
+} else if (dolphinsScore < 100 || koalasScore < 100) {
+	console.log('no one wins the trophy');
+}
 
 
 
