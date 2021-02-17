@@ -300,7 +300,7 @@ if(hasDriversLicense && hasGoodVision && !isTired) {
 }
 */
 
-const dolphinsScore = (96 + 108 + 89) / 3;
+/*const dolphinsScore = (96 + 108 + 89) / 3;
 const koalasScore = (88 + 91 + 110) / 3;
 console.log(dolphinsScore, koalasScore);
 
@@ -310,6 +310,20 @@ if (dolphinsScore > koalasScore) {
 	console.log('koalas won');
 } else {
 	console.log('draw');
+}*/
+
+
+const dolphinsScore = (97 + 112 + 101) / 3;
+const koalasScore = (109 + 95 + 123) / 3;
+const draw = 100;
+console.log(dolphinsScore, koalasScore);
+
+if(dolphinsScore < draw && koalasScore < draw) {
+	console.log('draw');
+}else if(dolphinsScore < koalasScore) {
+	console.log('koalas win the trophy');
+}else if (dolphinsScore > koalasScore) {
+	console.log('dolphins win the trophy');
 }
 
 
