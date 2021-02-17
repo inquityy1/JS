@@ -273,7 +273,7 @@ if (favourite === 23) {
 }
 
 if(favourite !== 23) console.log('Why not 23?');
-*/
+
 
 const hasDriversLicense = true; // A
 const hasGoodVision = true; // B
@@ -298,8 +298,19 @@ if(hasDriversLicense && hasGoodVision && !isTired) {
 } else {
 	console.log('Some else should drive...');
 }
+*/
 
+const dolphinsScore = (96 + 108 + 89) / 3;
+const koalasScore = (88 + 91 + 110) / 3;
+console.log(dolphinsScore, koalasScore);
 
+if (dolphinsScore > koalasScore) {
+	console.log('dolphins won');
+} else if (koalasScore > dolphinsScore) {
+	console.log('koalas won');
+} else {
+	console.log('draw');
+}
 
 
 
