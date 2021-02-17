@@ -324,7 +324,7 @@ if (dolphinsScore > koalasScore && dolphinsScore >= 100) {
 } else {
 	console.log('draw');
 }
-*/
+
 
 
 const dolphinsScore = (97 + 112 + 81) / 3;
@@ -336,6 +336,38 @@ if (dolphinsScore === koalasScore && dolphinsScore >= 100 && koalasScore >= 100)
 } else if (dolphinsScore < 100 || koalasScore < 100) {
 	console.log('no one wins the trophy');
 }
+*/
+
+const day = 'wednesday';
+
+switch(day) {
+	case 'monday': // day === 'monday'
+		console.log('Plan course structure');
+		console.log('Go to coding meetup');
+		break;
+	case 'tuesday':
+		console.log('prepare theory videos');
+		break;
+	case 'wednesday':
+	case 'thursday':
+		console.log('write code examples');
+		break;
+	case 'friday':
+		console.log('Record videos');
+		break;
+	case 'saturday':
+	case 'sunday':
+		console.log('Enjoy the weekend :D');
+		break;
+	default:
+		console.log('Not a valid day!');
+}
+
+
+
+
+
+
 
 
 
