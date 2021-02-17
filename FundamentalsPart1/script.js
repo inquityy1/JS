@@ -313,17 +313,16 @@ if (dolphinsScore > koalasScore) {
 }*/
 
 
-const dolphinsScore = (97 + 112 + 101) / 3;
-const koalasScore = (109 + 95 + 123) / 3;
-const draw = 100;
+const dolphinsScore = (272 + 112 + 101) / 3;
+const koalasScore = (129 + 95 + 123) / 3;
 console.log(dolphinsScore, koalasScore);
 
-if(dolphinsScore < draw && koalasScore < draw) {
-	console.log('draw');
-}else if(dolphinsScore < koalasScore) {
-	console.log('koalas win the trophy');
-}else if (dolphinsScore > koalasScore) {
+if (dolphinsScore > koalasScore && dolphinsScore >= 100) {
 	console.log('dolphins win the trophy');
+} else if (koalasScore > dolphinsScore && koalasScore >= 100) {
+	console.log('koalas win the trophy');
+} else {
+	console.log('draw');
 }
 
 
