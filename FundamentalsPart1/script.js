@@ -204,7 +204,7 @@ if (johnsSecondTestBMI > marksSecondTestBMI) {
 } else {
 	console.log(`Jhons second test BMI ${johnsFirstTestBMI} is lower than Marks ${marksFirstTestBMI}`);
 }
-*/
+
 
 // type conversion
 const inputYear = '1991';
@@ -227,8 +227,30 @@ console.log('23' > '18');
 let n = '1' + 1;
 n = n - 1;
 console.log(n);
+*/
 
+// 5 falsy values: 0, '', undefined, null, NaN.
 
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean(''));
+console.log(Boolean('Jonas'));
+console.log(Boolean({}));
+
+const money = 0;
+
+if(money) {
+	console.log('Dont spand it all ;)');
+} else {
+	console.log('You should get a job!');
+}
+
+let height;
+if(height) {
+	console.log('YAY! height is defined');
+} else {
+	console.log('Height is UNDEFINED');
+}
 
 
 
