@@ -377,7 +377,7 @@ if (day === 'monday') {
 } else {
 	console.log('Not a valid day!');
 }
-*/
+
 
 3 + 4
 1991
@@ -389,6 +389,46 @@ if (23 > 10) {
 
 const me = 'Jonas';
 console.log(`I'm ${2037 - 1991} years old ${me}`)
+
+
+const age = 23;
+//age >= 18 ? console.log('i like to dring wine 👀') : console.log('i like to dring water 😈');
+//age >= 18 ? 'wine' : 'water';
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+let drink2;
+if(age >= 18) {
+	drink2 = 'wine';
+} else {
+	drink2 = 'water';
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
+*/
+
+
+const bill = 275;
+
+const tip = bill >= 50 &&
+			bill <= 300 ?
+			bill * (15 / 100) :
+			bill * (20 / 100);
+
+totalValue = bill + tip;
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and total value ${totalValue}`);
+
+
+
+
+
+
+
+
+
 
 
 
