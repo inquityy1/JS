@@ -111,27 +111,25 @@ console.log (yearsUntilRetirement(1950, 'Nemanja'));
 */
 
 // full version of => 
-const calcAverage = (A, B, C) => {
-	const average = (A + B + C) / 3;
-	return average;
-}
 
-console.log(calcAverage(3, 3, 15));
+// const calcAverage = (A, B, C) => {
+//	const average = (A + B + C) / 3;
+//	return average;
+// }
+// console.log(calcAverage(3, 3, 15));
 
 // shortcut
-const calcAge3 = (A, B, C) => (A + B + C) / 3;
-const average = calcAge3(3, 3, 15);
-console.log(average);
+const calcAverage2 = (A, B, C) => (A + B + C) / 3;
+console.log(calcAverage2(3, 3 , 15));
 
-// function for both team average
-function bothAverage() {
-	const dolAverage = (44 + 23 + 71) / 3;
-	const koaAverage = (65 + 54 + 49) / 3;
-	
-	return `Dolphins average score is ${dolAverage} and koalas average score is ${koaAverage}`;
-}
 
-console.log(bothAverage());
+// both team average
+
+const scoreDolphins = calcAverage2(44, 23, 71);
+const scoreKoalas = calcAverage2(65, 54, 49);
+
+
+
 
 
 
