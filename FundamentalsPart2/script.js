@@ -125,8 +125,8 @@ console.log(calcAverage2(3, 3 , 15));
 
 // both team average
 
-const scoreDolphins = calcAverage2(44, 23, 71);
-const scoreKoalas = calcAverage2(65, 54, 49);
+let scoreDolphins = calcAverage2(44, 23, 71);
+let scoreKoalas = calcAverage2(65, 54, 49);
 console.log(scoreDolphins, scoreKoalas);
 
 // who won the trophy 
@@ -142,11 +142,12 @@ const checkWinner = function(avgDolphins, avgKoalas) {
 }
 checkWinner(scoreDolphins, scoreKoalas);
 
+// test 2
 
-
-
-
-
+scoreDolphins = calcAverage2(85, 54, 41);
+scoreKoalas = calcAverage2(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas);
 
 
 
