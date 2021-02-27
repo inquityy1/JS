@@ -87,7 +87,7 @@ function fruitProcessor(apples, oranges) {
 fruitProcessor(2, 3);
 
 console.log(fruitProcessor(2, 3));
-*/
+
 
 const calcAge = function(year) {
 	return 2037 - year;
@@ -108,6 +108,25 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log (yearsUntilRetirement(2001, 'Nebojsa'));
 console.log (yearsUntilRetirement(1950, 'Nemanja'));
+*/
+
+// full version of => 
+const calcAverage = (A, B, C) => {
+	const average = (A + B + C) / 3;
+	return average;
+}
+
+console.log(calcAverage(3, 3, 15));
+
+// shortcut
+const calcAge3 = (A, B, C) => (A + B + C) / 3;
+const average = calcAge3(3, 3, 15);
+console.log(average);
+
+
+
+
+
 
 
 
