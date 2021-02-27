@@ -108,7 +108,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log (yearsUntilRetirement(2001, 'Nebojsa'));
 console.log (yearsUntilRetirement(1950, 'Nemanja'));
-*/
+
 
 // full version of => 
 
@@ -119,7 +119,7 @@ console.log (yearsUntilRetirement(1950, 'Nemanja'));
 // console.log(calcAverage(3, 3, 15));
 
 // shortcut
-const calcAverage2 = (A, B, C) => (A + B + C) / 3;
+
 console.log(calcAverage2(3, 3 , 15));
 
 
@@ -148,9 +148,15 @@ scoreDolphins = calcAverage2(85, 54, 41);
 scoreKoalas = calcAverage2(23, 34, 27);
 console.log(scoreDolphins, scoreKoalas);
 checkWinner(scoreDolphins, scoreKoalas);
+*/
 
 
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
 
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
 
 
 
