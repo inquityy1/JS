@@ -123,6 +123,17 @@ const calcAge3 = (A, B, C) => (A + B + C) / 3;
 const average = calcAge3(3, 3, 15);
 console.log(average);
 
+// function for both team average
+function bothAverage() {
+	const dolAverage = (44 + 23 + 71) / 3;
+	const koaAverage = (65 + 54 + 49) / 3;
+	
+	return `Dolphins average score is ${dolAverage} and koalas average score is ${koaAverage}`;
+}
+
+console.log(bothAverage());
+
+
 
 
 
