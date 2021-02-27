@@ -198,7 +198,7 @@ const ages = [
 	calcAge(years[years.length - 1])
 ];
 console.log(ages);
-*/
+
 
 const friends = ['Michael', 'Steven', 'Peter'];
 
@@ -215,6 +215,51 @@ friends.pop(); //Last
 const popped = friends.pop();
 console.log(popped);
 console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('sdsa'));
+
+console.log(friends.includes('Steven'));
+console.log(friends.includes('sdsa'));
+
+if (friends.includes('Steven')) {
+	console.log('You have frend');
+}
+*/
+
+
+// const calcBill = function (bill) {
+//	return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// }
+
+function calcBill(bill) {
+	if (bill >= 50 && bill <= 300) {
+		return bill * 0.15;
+	} else {
+		return bill * 0.2;
+	}
+}
+
+const bills = [125,555,44];
+const tips = [
+	calcBill(bills[0]),
+	calcBill(bills[1]),
+	calcBill(bills[2])
+];
+console.log(bills, tips);
+
+const totals = [
+	tips[0] + bills[0],
+	tips[1] + bills[1],
+	tips[2] + bills[2]
+]
+console.log(totals);
+
+
+
 
 
 
