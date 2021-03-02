@@ -316,7 +316,7 @@ console.log(nebojsa);
 // make it in dinamic way
 
 console.log(`${nebojsa.firstName} has ${nebojsa.friends.length} friends, and his best friend is called ${nebojsa.friends[0]}`);
-*/
+
 
 
 const nebojsa = {
@@ -356,9 +356,32 @@ console.log(nebojsa.age);
 // "Nebojsa is a 36 year old teacher, and he has a/no driver's license"
 
 console.log(nebojsa.getSummary());
+*/
 
 
+const mark = {
+	fullName: 'Mark Miller',
+	mass: 78,
+	height: 1.69,
+	
+	calcBMI: function() {
+		(this.mass / this.height ** 2).toFixed(1);
+		return this.bmi;
+	}
+}
 
+const john = {
+	fullName: 'John Smith',
+	mass: 92,
+	height: 1.95,
+	
+	calcBMI: function() {
+		return (this.mass / this.height ** 2).toFixed(1);
+	}
+}
+
+console.log(mark.bmi);
+console.log(john.calcBMI());
 
 
 
