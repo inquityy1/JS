@@ -299,8 +299,28 @@ console.log(nebojsa['last' + nameKey]);
 //	not working
 //console.log(nebojsa.'last' + nameKey);
 
-const intrestedIn = prompt('What do you want to know about Jonas? Choose brtween firstName, age, job, lastName and friends');
+const intrestedIn = prompt('What do you want to know about Nebojsa? Choose brtween firstName, age, job, lastName and friends');
+
+if (nebojsa[intrestedIn]) {
 console.log(nebojsa[intrestedIn]);
+} else {
+	console.log('Wrong request! Choose brtween firstName, age, job, lastName and friends');	
+}
+
+nebojsa.location = 'Portugal';
+nebojsa['twitter'] = '@JoeMama'
+console.log(nebojsa);
+
+// Challenge
+// Nebojsa has 3 friends, and his best friend is called Michael
+// make it in dinamic way
+
+console.log(`${nebojsa.firstName} has ${nebojsa.friends.length} friends, and his best friend is called ${nebojsa.friends[0]}`);
+
+
+
+
+
 
 
 
