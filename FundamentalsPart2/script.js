@@ -277,7 +277,7 @@ const jonas = {
 };
 
 console.log(jonas);
-*/
+
 
 const nebojsa = {
 	firstName: 'Nebojsa',
@@ -316,9 +316,21 @@ console.log(nebojsa);
 // make it in dinamic way
 
 console.log(`${nebojsa.firstName} has ${nebojsa.friends.length} friends, and his best friend is called ${nebojsa.friends[0]}`);
+*/
 
 
-
+const nebojsa = {
+	firstName: 'Nebojsa',
+	lastName: 'Nikolic',
+	birthYear: 1991,
+	job: 'Teacher',
+	friends: ['Michael', 'Peter', 'Steven']
+	hasDriversLicense: true,
+	
+	calcAge: function(birthYear) {
+		return 2037 - birthYear;
+	}
+};
 
 
 
