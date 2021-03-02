@@ -291,6 +291,7 @@ console.log(nebojsa);
 
 console.log(nebojsa.lastName);
 console.log(nebojsa['lastName']);
+console.log(nebojsa['age']);
 
 
 
