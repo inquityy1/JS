@@ -228,7 +228,7 @@ console.log(friends.includes('sdsa'));
 if (friends.includes('Steven')) {
 	console.log('You have frend');
 }
-*/
+
 
 
 // const calcBill = function (bill) {
@@ -257,6 +257,43 @@ const totals = [
 	tips[2] + bills[2]
 ]
 console.log(totals);
+
+
+
+const jonasArray = [
+	'Nebojsa',
+	'Nikolic',
+	2037 - 2001,
+	'Teacher'
+	['Michael', 'Peter', 'Steven']
+];
+
+const jonas = {
+	firstName: 'Nebojsa',
+	lastName: 'Nikolic',
+	age: 2037 - 2001,
+	job: 'Teacher',
+	friends: ['Michael', 'Peter', 'Steven']
+};
+
+console.log(jonas);
+*/
+
+const nebojsa = {
+	firstName: 'Nebojsa',
+	lastName: 'Nikolic',
+	age: 2037 - 2001,
+	job: 'Teacher',
+	friends: ['Michael', 'Peter', 'Steven']
+};
+
+console.log(nebojsa);
+
+console.log(nebojsa.lastName);
+console.log(nebojsa['lastName']);
+
+
+
 
 
 
