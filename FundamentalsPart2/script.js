@@ -365,7 +365,7 @@ const mark = {
 	height: 1.69,
 	
 	calcBMI: function() {
-		(this.mass / this.height ** 2).toFixed(1);
+		this.bmi = (this.mass / this.height ** 2).toFixed(1);
 		return this.bmi;
 	}
 }
