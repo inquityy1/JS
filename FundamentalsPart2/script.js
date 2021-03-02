@@ -322,20 +322,40 @@ console.log(`${nebojsa.firstName} has ${nebojsa.friends.length} friends, and his
 const nebojsa = {
 	firstName: 'Nebojsa',
 	lastName: 'Nikolic',
-	birthYear: 1991,
+	birthYear: 2001,
 	job: 'Teacher',
-	friends: ['Michael', 'Peter', 'Steven']
-	hasDriversLicense: true,
+	friends: ['Michael', 'Peter', 'Steven'],
+	hasDriversLicense: false,
 	
-	calcAge: function(birthYear) {
-		return 2037 - birthYear;
+//	calcAge: function(birthYear) {
+//		return 2037 - birthYear;
+//	}
+	
+//	calcAge: function() {
+//		console.log(this);
+//		return 2037 - this.birthYear;
+//	}
+
+	calcAge: function() {
+		this.age = 2037 - this.birthYear;
+		return this.age;
+	},
+	
+	getSummary: function() {
+		return `${this.firstName} is a ${this.calcAge()}-year old ${nebojsa.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`;
 	}
 };
 
+console.log(nebojsa.calcAge());
 
+console.log(nebojsa.age);
+console.log(nebojsa.age);
+console.log(nebojsa.age);
 
+// Challenge
+// "Nebojsa is a 36 year old teacher, and he has a/no driver's license"
 
-
+console.log(nebojsa.getSummary());
 
 
 
