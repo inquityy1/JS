@@ -291,10 +291,16 @@ console.log(nebojsa);
 
 console.log(nebojsa.lastName);
 console.log(nebojsa['lastName']);
-console.log(nebojsa['age']);
 
+const nameKey = 'Name';
+console.log(nebojsa['first' + nameKey]);
+console.log(nebojsa['last' + nameKey]);
 
+//	not working
+//console.log(nebojsa.'last' + nameKey);
 
+const intrestedIn = prompt('What do you want to know about Jonas? Choose brtween firstName, age, job, lastName and friends');
+console.log(nebojsa[intrestedIn]);
 
 
 
