@@ -356,7 +356,7 @@ console.log(nebojsa.age);
 // "Nebojsa is a 36 year old teacher, and he has a/no driver's license"
 
 console.log(nebojsa.getSummary());
-*/
+
 
 
 const mark = {
@@ -404,6 +404,24 @@ if (mark.bmi > john.bmi) {
 } else {
 	console.log('They have same BMI')
 }
+*/
+
+
+// for loop keeps running while condition is true
+for(let rep = 5; rep <= 10; rep++) {
+	console.log(`Lifting weights repetition ${rep} 😁`);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
