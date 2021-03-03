@@ -404,16 +404,33 @@ if (mark.bmi > john.bmi) {
 } else {
 	console.log('They have same BMI')
 }
-*/
+
 
 
 // for loop keeps running while condition is true
 for(let rep = 5; rep <= 10; rep++) {
 	console.log(`Lifting weights repetition ${rep} 😁`);
 }
+*/
 
+const nebojsa = [
+	'Nebojsa',
+	'Nikolic',
+	'teacher',
+	2037 - 2001,
+	['Michael', 'Peter', 'Steven'],
+	true
+];
 
+// console.log(jonas[0])
+// console.log(jonas[1])
+//...
+// console.log(jonas[4])
+// console.log(jonas[5]) does NOT exist
 
+for (let i = 0; i < nebojsa.length; i++) {
+	console.log(nebojsa[i]);
+}
 
 
 
