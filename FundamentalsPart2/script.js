@@ -416,8 +416,8 @@ for(let rep = 5; rep <= 10; rep++) {
 const nebojsa = [
 	'Nebojsa',
 	'Nikolic',
-	'teacher',
 	2037 - 2001,
+	'teacher',
 	['Michael', 'Peter', 'Steven'],
 	true
 ];
@@ -447,6 +447,26 @@ for (let i = 0; i < years.length; i++) {
 	ages.push (2037 - years[i]);
 }
 console.log(ages);
+
+// continue and break
+console.log('--- ONLY STRINGS ---');
+for (let i = 0; i < nebojsa.length; i++) {
+	if(typeof nebojsa[i] !== 'string') continue;
+	
+	console.log(nebojsa[i], typeof nebojsa[i]);
+}
+
+console.log('--- BREAK WITH NUMBER ---');
+for (let i = 0; i < nebojsa.length; i++) {
+	if(typeof nebojsa[i] === 'number') break;
+	
+	console.log(nebojsa[i], typeof nebojsa[i]);
+}
+
+
+
+
+
 
 
 
