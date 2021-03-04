@@ -421,6 +421,7 @@ const nebojsa = [
 	['Michael', 'Peter', 'Steven'],
 	true
 ];
+const types = [];
 
 // console.log(jonas[0])
 // console.log(jonas[1])
@@ -429,10 +430,14 @@ const nebojsa = [
 // console.log(jonas[5]) does NOT exist
 
 for (let i = 0; i < nebojsa.length; i++) {
-	console.log(nebojsa[i]);
+	// reading from jonas array
+	console.log(nebojsa[i], typeof nebojsa[i]);
+
+	// filling types array
+	types[i] = typeof nebojsa[i];
 }
 
-
+console.log(types);
 
 
 
