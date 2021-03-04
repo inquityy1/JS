@@ -462,7 +462,7 @@ for (let i = 0; i < nebojsa.length; i++) {
 	
 	console.log(nebojsa[i], typeof nebojsa[i]);
 }
-*/
+
 
 
 const nebojsa = [
@@ -488,10 +488,17 @@ console.log(`--------- Starting ${exercise}`);
 		console.log(`exercise ${exercise}: Lifting weight repetition ${rep}`)
 	}
 }
+*/
 
+for (let rep = 1; rep <= 10; rep++) {
+	console.log(`Lifting weight repetition ${rep}`);
+}
 
-
-
+let rep = 1;
+while (rep <= 10) {
+	console.log(`Lifting weight repetition ${rep}`);
+	rep++;
+}
 
 
 
