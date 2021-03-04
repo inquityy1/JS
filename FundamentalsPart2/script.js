@@ -481,7 +481,13 @@ for(let i = nebojsa.length -1; i >= 0; i--) {
 	console.log(i, nebojsa[i]);
 }
 
+for (let exercise = 1; exercise < 4; exercise++) {
+console.log(`--------- Starting ${exercise}`);
 
+	for (let rep = 1; rep <= 6; rep++) {
+		console.log(`exercise ${exercise}: Lifting weight repetition ${rep}`)
+	}
+}
 
 
 
