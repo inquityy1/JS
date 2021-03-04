@@ -434,11 +434,19 @@ for (let i = 0; i < nebojsa.length; i++) {
 	console.log(nebojsa[i], typeof nebojsa[i]);
 
 	// filling types array
-	types[i] = typeof nebojsa[i];
+	//types[i] = typeof nebojsa[i];
+	types.push(typeof nebojsa[i]);
 }
 
 console.log(types);
 
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+	ages.push (2037 - years[i]);
+}
+console.log(ages);
 
 
 
