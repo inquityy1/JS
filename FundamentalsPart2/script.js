@@ -411,7 +411,7 @@ if (mark.bmi > john.bmi) {
 for(let rep = 5; rep <= 10; rep++) {
 	console.log(`Lifting weights repetition ${rep} 😁`);
 }
-*/
+
 
 const nebojsa = [
 	'Nebojsa',
@@ -462,9 +462,24 @@ for (let i = 0; i < nebojsa.length; i++) {
 	
 	console.log(nebojsa[i], typeof nebojsa[i]);
 }
+*/
 
 
+const nebojsa = [
+	'Nebojsa',
+	'Nikolic',
+	2037 - 2001,
+	'teacher',
+	['Michael', 'Peter', 'Steven'],
+	true
+];
 
+// 0, 2, ..., 4
+// 4, 3, ..., 0
+
+for(let i = nebojsa.length -1; i >= 0; i--) {
+	console.log(i, nebojsa[i]);
+}
 
 
 
