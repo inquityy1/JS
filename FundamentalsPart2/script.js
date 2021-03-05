@@ -525,7 +525,12 @@ for (let i = 0; i <= bills.length - 1; i++) {
 	tips.push(calcTip(bills[i]));
 }
 
+for (let j = 0; j < tips.length; j++) {
+	totals.push(bills[j] + tips[j]);
+}
+
 console.log(tips);
+console.log(totals);
 
 
 //const years = [1991, 2007, 1969, 2020];
