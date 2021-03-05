@@ -522,11 +522,9 @@ const calcTip = function (bill) {
 }
 
 for (let i = 0; i <= bills.length - 1; i++) {
-	tips.push(calcTip(bills[i]));
-}
-
-for (let j = 0; j < tips.length; j++) {
-	totals.push(bills[j] + tips[j]);
+	const tip = calcTip(bills[i]);
+	tips.push(tip);
+	totals.push(tip + bills[i]);
 }
 
 console.log(tips);
