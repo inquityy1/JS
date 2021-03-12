@@ -527,17 +527,16 @@ for (let i = 0; i <= bills.length - 1; i++) {
 	totals.push(tip + bills[i]);
 }
 
-console.log(tips);
-console.log(totals);
+console.log(bills, tips, totals);
 
-
-//const years = [1991, 2007, 1969, 2020];
-//const ages = [];
-
-//for (let i = 0; i < years.length; i++) {
-//	ages.push (2037 - years[i]);
-//}
-
+const calcAverage = function (arr) {
+	let sum = 0;
+	for(let i = 0; i < arr.length; i++) {
+		sum += arr[i];
+	}
+	return sum / arr.length;
+}
+console.log(calcAverage(totals));
 
 
 
