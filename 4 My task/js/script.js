@@ -1,4 +1,4 @@
-function myFunction() {
+function upload() {
   const table = document.getElementById("myTable");
   const row = table.insertRow();
   const cell1 = row.insertCell(0);
@@ -6,7 +6,7 @@ function myFunction() {
   const cell3 = row.insertCell(2);
   cell1.innerHTML = 1;
   cell2.innerHTML = myText.value;
-  cell3.innerHTML = "dsa";
+  cell3.innerHTML = '<button id="btn" name="btn">Button</button>';
 }
 
-document.getElementById("submit").addEventListener("click", myFunction);
+document.getElementById("submit").addEventListener("click", upload);
