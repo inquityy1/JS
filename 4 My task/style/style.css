@@ -110,6 +110,12 @@ main .table table tr .center {
   width: 80%;
 }
 
-#demo {
+#btn {
   color: red;
+  background: white;
+}
+
+tr,
+td {
+  border: 1px solid black;
 }

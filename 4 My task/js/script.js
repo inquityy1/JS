@@ -6,7 +6,7 @@ function upload() {
   const cell3 = row.insertCell(2);
   cell1.innerHTML = 1;
   cell2.innerHTML = myText.value;
-  cell3.innerHTML = '<button id="btn" name="btn">Button</button>';
+  cell3.innerHTML = '<button id="btn" name="btn">DELETE</button>';
 }
 
 document.getElementById("submit").addEventListener("click", upload);
