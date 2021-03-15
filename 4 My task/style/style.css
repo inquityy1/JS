@@ -109,3 +109,7 @@ main .table table tr .center {
   padding: 5px;
   width: 80%;
 }
+
+#demo {
+  color: red;
+}
