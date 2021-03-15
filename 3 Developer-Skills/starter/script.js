@@ -43,6 +43,8 @@ console.log(amplitude);
 // 2) Breaking up into sub-problems
 // - Merge 2 arrays?
 
+/*
+
 const calcTempAmplitudeNew = function (t1, t2) {
   const temps = t1.concat(t2);
   console.log(temps);
@@ -62,3 +64,26 @@ const calcTempAmplitudeNew = function (t1, t2) {
 };
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
 console.log(amplitudeNew);
+
+*/
+
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+
+    // C) FIX
+    value: prompt('Degrees celsius:'),
+  };
+
+  // B) FIND
+  console.table(measurement);
+
+  // console.log(measurement.value);
+  //  console.warn(measurement.value);
+  // console.error(measurement.value);
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+// A) IDENTIFY BUG
+console.log(measureKelvin());

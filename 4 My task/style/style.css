@@ -74,6 +74,16 @@ main .text-submit button {
   margin-left: 2rem;
   padding: 5px 10px 10px 10px;
   background-color: yellow;
+  transition: background 1s ease;
+}
+
+main .text-submit button:hover {
+  background-color: violet;
+}
+
+main .text-submit button:active {
+  background-color: black;
+  color: white;
 }
 
 main .table {
