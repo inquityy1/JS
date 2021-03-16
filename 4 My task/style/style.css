@@ -93,6 +93,12 @@ main .table {
   width: 50%;
 }
 
+tr,
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+
 main .table table {
   border-collapse: collapse;
   width: 80%;
@@ -110,12 +116,18 @@ main .table table tr .center {
   width: 80%;
 }
 
-#btn {
+#delete {
   color: red;
   background: white;
+  border: none;
+  transition: background 1s ease;
 }
 
-tr,
-td {
-  border: 1px solid black;
+#delete:hover {
+  background-color: violet;
+}
+
+#delete:active {
+  background-color: black;
+  color: white;
 }

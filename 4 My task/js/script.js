@@ -6,7 +6,12 @@ function upload() {
   const cell3 = row.insertCell(2);
   cell1.innerHTML = 1;
   cell2.innerHTML = myText.value;
-  cell3.innerHTML = '<button id="btn" name="btn">DELETE</button>';
+  cell3.innerHTML =
+    '<button id="delete" onclick="myDeleteFunction()" name="delete">DELETE</button>';
+}
+
+function myDeleteFunction() {
+  document.getElementById("myTable").deleteRow(1);
 }
 
 document.getElementById("submit").addEventListener("click", upload);
