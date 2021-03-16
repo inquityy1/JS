@@ -7,11 +7,12 @@ function upload() {
   cell1.innerHTML = 1;
   cell2.innerHTML = myText.value;
   cell3.innerHTML =
-    '<button id="delete" onclick="myDeleteFunction()" name="delete">DELETE</button>';
+    '<button id="delete" onclick="deleteRow(this)" name="delete">DELETE</button>';
 }
 
-function myDeleteFunction() {
-  document.getElementById("myTable").deleteRow(1);
+function deleteRow(r) {
+  const i = r.parentNode.parentNode.rowIndex;
+  document.getElementById("myTable").deleteRow(i);
 }
 
 document.getElementById("submit").addEventListener("click", upload);
