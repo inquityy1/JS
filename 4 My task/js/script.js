@@ -15,16 +15,25 @@ function upload() {
 //   document.getElementById("add-row").deleteRow(i);
 // }
 
-document.getElementById("submit").addEventListener("click", upload);
+function deleteRow(row) {
+  let i = row.parentNode.parentNode.rowIndex;
+  if (i > 1) {
+    document.getElementById("add-row").deleteRow(i);
+    update_number(i);
+  } else {
+    document.getElementById("add-row").deleteRow(i);
+    update_number(i);
+  }
+}
 
 function update_number(i) {
-  var table = document.getElementById("add-row");
-  for (var r = 1, n = table.rows.length; r < n; r++) {
-    for (var c = 0, m = table.rows[r].cells.length; c <= 1; c++) {
-      var table_date = table.rows[r].cells[0].innerHTML;
+  let table = document.getElementById("add-row");
+  for (let r = 1, n = table.rows.length; r < n; r++) {
+    for (let c = 0, m = table.rows[r].cells.length; c < 1; c++) {
+      let table_date = table.rows[r].cells[0].innerHTML;
       if (!isNaN(table_date)) {
         if (i < table_date) {
-          var new_data = table_date - 1;
+          let new_data = table_date - 1;
           table.rows[r].cells[0].innerHTML = new_data;
         }
       }
@@ -32,13 +41,4 @@ function update_number(i) {
   }
 }
 
-function deleteRow(row) {
-  var i = row.parentNode.parentNode.rowIndex;
-  if (i > 1) {
-    document.getElementById("add-row").deleteRow(i);
-    update_number(i);
-  } else {
-    document.getElementById("add-row").getElementsByTagName("input")[0].value =
-      "";
-  }
-}
+document.getElementById("submit").addEventListener("click", upload);
