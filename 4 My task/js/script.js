@@ -1,5 +1,5 @@
-// uploading rows
-function upload() {
+// generating rows
+function generating() {
   const table = document.getElementById("add-row");
   const row = table.insertRow();
   const cell1 = row.insertCell(0);
@@ -45,4 +45,4 @@ function deleteRow(row) {
   }
 }
 
-document.getElementById("submit").addEventListener("click", upload);
+document.getElementById("submit").addEventListener("click", generating);
