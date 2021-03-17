@@ -4,9 +4,12 @@ function upload() {
   const cell1 = row.insertCell(0);
   const cell2 = row.insertCell(1);
   const cell3 = row.insertCell(2);
+  const cell4 = row.insertCell(3);
+
   cell1.innerHTML = table.rows.length - 1;
   cell2.innerHTML = myText.value;
-  cell3.innerHTML =
+  cell3.innerHTML = '<button id="edit" onclick="" name="edit">EDIT</button>';
+  cell4.innerHTML =
     '<button id="delete" onclick="deleteRow(this)" name="delete">DELETE</button>';
 }
 

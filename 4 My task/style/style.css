@@ -116,11 +116,26 @@ main .table table tr .center {
   width: 80%;
 }
 
+#edit {
+  color: black;
+  border: none;
+  transition: background 0.5s ease;
+}
+
+#edit:hover {
+  background-color: #eee382;
+}
+
+#edit:active {
+  background-color: black;
+  color: white;
+}
+
 #delete {
   color: red;
   background: white;
   border: none;
-  transition: background 1s ease;
+  transition: background 0.5s ease;
 }
 
 #delete:hover {
