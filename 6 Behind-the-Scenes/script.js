@@ -79,7 +79,7 @@ const z = 3;
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
-*/
+
 
 // console.log(this);
 
@@ -113,3 +113,21 @@ matilda.calcAge();
 
 const f = jonas.calcAge;
 f();
+*/
+
+var firstName = 'Matilda';
+
+const jonas = {
+  firstName: 'nebojsa',
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+
+  greet: () => {
+    console.log(this);
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+jonas.greet();
