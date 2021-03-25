@@ -124,13 +124,19 @@ const jonas = {
     // console.log(this);
     console.log(2037 - this.year);
 
-    const self = this; // self or that
-    const isMillenial = function () {
-      console.log(self);
-      console.log(self.year >= 2001 && self.year <= 2015);
-      // console.log(this.year >= 2001 && this.year <= 2015);
-    };
+    // SOLUTION 1
+    // const self = this; // self or that
+    // const isMillenial = function () {
+    //   console.log(self);
+    //   console.log(self.year >= 2001 && self.year <= 2015);
+    //   // console.log(this.year >= 2001 && this.year <= 2015);
+    // };
 
+    // SOLUTION 2
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 2001 && this.year <= 2015);
+    };
     isMillenial();
   },
 
@@ -141,3 +147,17 @@ const jonas = {
 };
 jonas.greet();
 jonas.calcAge();
+
+// argument keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+addExpr(2, 5, 8, 12);
+
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addArrow(2, 5, 8);
