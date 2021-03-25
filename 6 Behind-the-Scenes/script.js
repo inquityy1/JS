@@ -119,15 +119,25 @@ var firstName = 'Matilda';
 
 const jonas = {
   firstName: 'nebojsa',
-  year: 1991,
+  year: 2001,
   calcAge: function () {
-    console.log(this);
+    // console.log(this);
     console.log(2037 - this.year);
+
+    const self = this; // self or that
+    const isMillenial = function () {
+      console.log(self);
+      console.log(self.year >= 2001 && self.year <= 2015);
+      // console.log(this.year >= 2001 && this.year <= 2015);
+    };
+
+    isMillenial();
   },
 
-  greet: () => {
+  greet: function () {
     console.log(this);
     console.log(`Hey ${this.firstName}`);
   },
 };
 jonas.greet();
+jonas.calcAge();
