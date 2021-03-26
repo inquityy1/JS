@@ -37,7 +37,6 @@ calcAge(2001);
 // console.log(age);
 // printAge();
 
-
 console.log(me);
 // console.log(job);
 // console.log(year);
@@ -80,7 +79,6 @@ console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
 
-
 // console.log(this);
 
 const calcAge = function (birthYear) {
@@ -113,7 +111,6 @@ matilda.calcAge();
 
 const f = jonas.calcAge;
 f();
-
 
 var firstName = 'Matilda';
 
@@ -161,7 +158,6 @@ var addArrow = (a, b) => {
   return a + b;
 };
 // addArrow(2, 5, 8);
-*/
 
 let age = 30;
 let oldAge = age;
@@ -178,3 +174,34 @@ friend.age = 27;
 
 console.log('Friend', friend);
 console.log('Me', me);
+*/
+
+// Primitive types
+let lastName = 'Wiliams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, oldLastName);
+
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Wiliams',
+  age: 27,
+};
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage:', jessica);
+console.log('After marriage:', marriedJessica);
+// marriedJessica = {};
+
+// Copying objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'Wiliams',
+  age: 27,
+};
+
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Davis';
+
+console.log('Before marriage:', jessica2);
+console.log('After marriage:', jessicaCopy);
