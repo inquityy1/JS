@@ -198,10 +198,17 @@ const jessica2 = {
   firstName: 'Jessica',
   lastName: 'Wiliams',
   age: 27,
+  family: ['Alice', 'Bob'],
 };
 
 const jessicaCopy = Object.assign({}, jessica2);
 jessicaCopy.lastName = 'Davis';
+
+console.log('Before marriage:', jessica2);
+console.log('After marriage:', jessicaCopy);
+
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('Jhon');
 
 console.log('Before marriage:', jessica2);
 console.log('After marriage:', jessicaCopy);
