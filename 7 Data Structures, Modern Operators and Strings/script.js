@@ -54,6 +54,16 @@ const restaurant = {
   },
 };
 
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+// Nullish: null and undefined (NOT 0 oe '')
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
+
+/*
+/////////////////////////////////////////
 // Use ANY data type, return ANY data type, short-circuiting
 console.log(3 || 'Jonas');
 console.log('' || 'Jonas');
@@ -70,6 +80,17 @@ const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
 
 console.log('---- AND ----');
+console.log(0 && 'jonas');
+console.log(7 && 'jonas');
+
+console.log('hello' && 23 && null && 'jonas');
+
+// Practical example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
 /*
 ////////////////////////////////////////////
