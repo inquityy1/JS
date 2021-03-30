@@ -62,6 +62,10 @@ const [pizza, , risotto, ...otherFood] = [
 ];
 console.log(pizza, risotto, otherFood);
 
+// Objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
 /*
 /////////////////////////////////////////////
 const arr = [7, 8, 9];
