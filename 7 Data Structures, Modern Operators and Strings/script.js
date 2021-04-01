@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
@@ -53,6 +53,18 @@ const restaurant = {
   },
 };
 
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(odersSet);
+
+/*
+///////////////////////////////////////////////
 // Property Names
 const properties = Object.keys(openingHours);
 console.log(properties);
@@ -321,7 +333,7 @@ console.log(i, j, k);
 // default values
 const [p = 1, q = 1, r = 1] = [7];
 console.log(p, q, r);
-*/
+
 
 const game = {
   team1: 'Bayern Munich',
@@ -363,6 +375,25 @@ const game = {
     team2: 6.5,
   },
 };
+
+// 1.
+for (const [i, player] of game.scored.entries()) {
+  console.log(`goal ${i + 1}: ${player}`);
+}
+
+// 2.
+const odds = Object.values(game.odds);
+let average = 0;
+for (const odd of odds) average += odd;
+average /= odds.length;
+console.log(average);
+
+// 3.
+const od = Object.entries(game.odds);
+for (const [team, odd] of od) {
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr} ${odd}`);
+}
 
 /*
 //////////////////////////////////////////////
