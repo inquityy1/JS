@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
@@ -53,6 +53,8 @@ const restaurant = {
   },
 };
 
+/*
+///////////////////////////////////////
 const question = new Map([
   ['question', 'What is the best programing language in the world?'],
   [1, 'C'],
@@ -534,3 +536,43 @@ printGoals(...game.scored);
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
 */
+
+const gameEvents = new Map([
+  [17, 'Goal'],
+  [36, 'Substitution'],
+  [47, 'Goal'],
+  [61, 'Substitution'],
+  [64, 'Yellow card'],
+  [69, 'Red card'],
+  [70, 'Substitution'],
+  [72, 'Substitution'],
+  [76, 'Goal'],
+  [80, 'Goal'],
+  [92, 'Yellow card'],
+]);
+
+const events = new Set([
+  'Goal',
+  'Substitution',
+  'Goal',
+  'Substitution',
+  'Yellow card',
+  'Red card',
+  'Substitution',
+  'Substitution',
+  'Goal',
+  'Goal',
+  'Yellow card',
+]);
+console.log(events);
+
+gameEvents.delete(64);
+console.log(gameEvents);
+
+for (const [key, event] of gameEvents) {
+  if (key < 45) {
+    console.log(`${event} happened in first half`);
+  } else {
+    console.log(`${event} happened in second half`);
+  }
+}
