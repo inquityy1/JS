@@ -537,6 +537,7 @@ team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
 */
 
+// 1
 const gameEvents = new Map([
   [17, 'Goal'],
   [36, 'Substitution'],
@@ -551,28 +552,50 @@ const gameEvents = new Map([
   [92, 'Yellow card'],
 ]);
 
-const events = new Set([
-  'Goal',
-  'Substitution',
-  'Goal',
-  'Substitution',
-  'Yellow card',
-  'Red card',
-  'Substitution',
-  'Substitution',
-  'Goal',
-  'Goal',
-  'Yellow card',
-]);
+const events = [...new Set(gameEvents.values())];
 console.log(events);
 
+////////////////////////////////////////////////////
+// const events = new Set([
+//   'Goal',
+//   'Substitution',
+//   'Goal',
+//   'Substitution',
+//   'Yellow card',
+//   'Red card',
+//   'Substitution',
+//   'Substitution',
+//   'Goal',
+//   'Goal',
+//   'Yellow card',
+// ]);
+// console.log(events);
+///////////////////////////////////////////////////
+
+// 2.
 gameEvents.delete(64);
 console.log(gameEvents);
 
-for (const [key, event] of gameEvents) {
-  if (key < 45) {
-    console.log(`${event} happened in first half`);
-  } else {
-    console.log(`${event} happened in second half`);
-  }
+// 3.
+const time = [...gameEvents.keys()].pop();
+console.log(time);
+console.log(
+  `An event happened, on average, every ${time / gameEvents.size} minutes`
+);
+
+// 4.
+for (const [min, event] of gameEvents) {
+  const half = min <= 45 ? 'First' : 'Second';
+  console.log(`[${half} Half] ${min}: ${event}`);
 }
+
+///////////////////////////////////////////////////////
+// 4.
+// for (const [key, events] of gameEvents) {
+//   if (key < 45) {
+//     console.log(`${events} happened in first half`);
+//   } else {
+//     console.log(`${events} happened in second half`);
+//   }
+// }
+///////////////////////////////////////////////////////
