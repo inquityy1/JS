@@ -52,6 +52,17 @@ const restaurant = {
   },
 };
 
+// Split and join
+console.log('a+vert+nice+string'.split('+'));
+console.log('Jonas Schmedtmann'.split(' '));
+
+const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+
+/*
+////////////////////////////////////////////
 const airline = 'TAP Air Portugal';
 
 console.log(airline.toLowerCase());
