@@ -34,6 +34,8 @@ document.addEventListener('keydown', function (e) {
 //////////////////////////////
 //////////////////////////////
 
+/*
+
 // Selecting elements
 // console.log(document.documentElement);
 // console.log(document.head);
@@ -118,3 +120,38 @@ logo.classList.contains('c', 'j'); // not included
 
 // Don't use
 logo.className = 'jonas';
+*/
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  const s1croords = section1.getBoundingClientRect();
+  console.log(s1croords);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log('Current scroll (X/Y)', window.pageXOffset, window.pageYOffset);
+
+  console.log(
+    'height/width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  // Scrolling
+  // window.scrollTo(
+  //   s1croords.left + window.pageXOffset,
+  //   s1croords.top + window.pageYOffset
+  // );
+
+  // OLD WAY
+  // window.scrollTo({
+  //   left: s1croords.left + window.pageXOffset,
+  //   top: s1croords.top + window.pageYOffset,
+  //   behavior: 'smooth',
+  // });
+
+  // MODERN WAY
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
