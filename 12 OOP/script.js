@@ -1,31 +1,37 @@
 'use strict';
 
-// const Person = function (firstName, birthYear) {
-//   // Instance properties
-//   this.firstName = firstName;
-//   this.birthYear = birthYear;
+const Person = function (firstName, birthYear) {
+  //   // Instance properties
+  this.firstName = firstName;
+  this.birthYear = birthYear;
 
-//   // Never do this
-//   //   this.calcAge = function () {
-//   //     console.log(2037 - this.birthYear);
-//   //   };
-// };
+  //   // Never do this
+  //   //   this.calcAge = function () {
+  //   //     console.log(2037 - this.birthYear);
+  //   //   };
+};
 
-// const jonas = new Person('Jonas', 1991);
-// console.log(jonas);
+const jonas = new Person('Jonas', 1991);
+console.log(jonas);
 
 // // 1. New {} is created
 // // 2. function is called, this = {}
 // // 3. {} linked to prototype
 // // 4. function automatically return {}
 
-// const matilda = new Person('Matilda', 2017);
-// const jack = new Person('Jack', 1975);
+const matilda = new Person('Matilda', 2017);
+const jack = new Person('Jack', 1975);
 // console.log(matilda, jack);
 
 // const jay = 'Jay';
 
-// console.log(jonas instanceof Person);
+console.log(jonas instanceof Person);
+
+Person.hey = function () {
+  console.log('Hey there');
+  console.log(this);
+};
+Person.hey();
 
 // // Prototypes
 // console.log(Person.prototype);
@@ -108,13 +114,14 @@ class PersonCl {
     this.birthYear = birthYear;
   }
 
+  // Instance methods
   // Methods will be added to .prototype property
   calcAge() {
-    console.log(2037 - this.birthYear);
+    // console.log(2037 - this.birthYear);
   }
 
   greet() {
-    console.log(`Hey ${this.fullName}`);
+    // console.log(`Hey ${this.fullName}`);
   }
 
   get age() {
@@ -123,7 +130,7 @@ class PersonCl {
 
   // Set a property that alredy exists
   set fullName(name) {
-    console.log(name);
+    // console.log(name);
     if (name.includes(' ')) this._fullName = name;
     else alert(`${name} is not a full name!`);
   }
@@ -131,14 +138,20 @@ class PersonCl {
   get fullName() {
     return this._fullName;
   }
+
+  // Static method
+  static hey() {
+    console.log('Hey there');
+    console.log(this);
+  }
 }
 
 const jessica = new PersonCl('Jessica Davis', 1996);
-console.log(jessica);
+// console.log(jessica);
 jessica.calcAge();
-console.log(jessica.age);
+// console.log(jessica.age);
 
-console.log(jessica.__proto__ === PersonCl.prototype);
+// console.log(jessica.__proto__ === PersonCl.prototype);
 
 // PersonCl.prototype.greet = function () {
 //   console.log(`Hey ${this.firstName}`);
@@ -151,6 +164,9 @@ jessica.greet();
 
 const walter = new PersonCl('Walter White', 1965);
 
+PersonCl.hey();
+
+/*
 const account = {
   owner: 'Jonas',
   movements: [200, 530, 120, 300],
@@ -164,7 +180,8 @@ const account = {
   },
 };
 
-console.log(account.latest);
+// console.log(account.latest);
 
 account.latest = 50;
-console.log(account.movements);
+// console.log(account.movements);
+*/
