@@ -50,7 +50,7 @@ const getCountryDataAndNeighbour = function (country) {
     request2.send();
 
     request2.addEventListener('load', function () {
-      const data2 = JSON.parse(this.responseText);
+      // const data2 = JSON.parse(this.responseText);
       console.log(data2);
 
       renderCountry(data2, 'neighbour');
@@ -59,17 +59,24 @@ const getCountryDataAndNeighbour = function (country) {
 };
 
 // getCountryDataAndNeighbour('portugal');
-getCountryDataAndNeighbour('serbia');
+// getCountryDataAndNeighbour('serbia');
 
-setTimeout(() => {
-  console.log('1 second passed');
-  setTimeout(() => {
-    console.log('2 second passed');
-    setTimeout(() => {
-      console.log('3 second passed');
-      setTimeout(() => {
-        console.log('4 second passed');
-      }, 1000);
-    }, 1000);
-  }, 1000);
-}, 1000);
+// setTimeout(() => {
+//   console.log('1 second passed');
+//   setTimeout(() => {
+//     console.log('2 second passed');
+//     setTimeout(() => {
+//       console.log('3 second passed');
+//       setTimeout(() => {
+//         console.log('4 second passed');
+//       }, 1000);
+//     }, 1000);
+//   }, 1000);
+// }, 1000);
+
+// const request = new XMLHttpRequest();
+// request.open('GET', `https://restcountries.eu/rest/v2/name/${country}`);
+// request.send();
+
+const request = fetch('https://restcountries.eu/rest/v2/name/portugal');
+console.log(request);
