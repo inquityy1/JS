@@ -21,12 +21,12 @@ const renderCountry = function (data, className = '') {
     </article>
   `;
   countriesContainer.insertAdjacentHTML('beforeend', html);
-  // countriesContainer.style.opacity = 1;
+  countriesContainer.style.opacity = 1;
 };
 
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText('beforeend', msg);
-  // countriesContainer.style.opacity = 1;
+  countriesContainer.style.opacity = 1;
 };
 
 ///////////////////////////////////////
@@ -63,6 +63,10 @@ const getCountryDataAndNeighbour = function (country) {
   });
 };
 
+/////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
 // getCountryDataAndNeighbour('portugal');
 // getCountryDataAndNeighbour('serbia');
 
@@ -95,51 +99,79 @@ const getCountryDataAndNeighbour = function (country) {
 //     });
 // };
 
-const getJSON = function (url, errorMsh = 'Something went wrong') {
-  return fetch(url).then(response => {
-    if (!response.ok) throw new Error(`${errorMsh} (${response.status})`);
+/////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 
-    return response.json();
-  });
-};
+// const getJSON = function (url, errorMsh = 'Something went wrong') {
+//   return fetch(url).then(response => {
+//     if (!response.ok) throw new Error(`${errorMsh} (${response.status})`);
 
-const getCountryData = function (country) {
-  // Country 1
+//     return response.json();
+//   });
+// };
 
-  getJSON(
-    `https://restcountries.eu/rest/v2/name/${country}`,
-    'Country not found'
-  )
+// const getCountryData = function (country) {
+//   // Country 1
+
+//   getJSON(
+//     `https://restcountries.eu/rest/v2/name/${country}`,
+//     'Country not found'
+//   )
+//     .then(data => {
+//       renderCountry(data[0]);
+//       const neighbour = data[0].borders[0];
+//       // const neighbour = 'dsadsa';
+
+//       if (!neighbour) throw new Error('No neighbour found!');
+
+//       // Country 2
+//       return getJSON(
+//         `https://restcountries.eu/rest/v2/alpha/${neighbour}`,
+//         'Country not found'
+//       );
+//     })
+
+//     .then(data => renderCountry(data, 'neighbour'))
+//     .catch(err => {
+//       console.log(`${err}`);
+//       renderError(`Something went wrong ${err.message} try again!`);
+//     })
+//     .finally(() => {
+//       countriesContainer.style.opacity = 1;
+//     });
+// };
+
+// // getCountryData('portugal');
+// // getCountryData('germany');
+// // getCountryData('serbia');
+
+// btn.addEventListener('click', function () {
+//   getCountryData('portugal');
+// });
+
+// getCountryData('australia');
+
+const whereAmI = function (lat, lng) {
+  fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
+    .then(res => {
+      if (!res.ok) throw new Error(`Problem with geocoding ${res.status}`);
+      return res.json();
+    })
     .then(data => {
-      renderCountry(data[0]);
-      const neighbour = data[0].borders[0];
-      // const neighbour = 'dsadsa';
+      console.log(data);
+      console.log(`You are in ${data.city}, ${data.country}`);
 
-      if (!neighbour) throw new Error('No neighbour found!');
-
-      // Country 2
-      return getJSON(
-        `https://restcountries.eu/rest/v2/alpha/${neighbour}`,
-        'Country not found'
-      );
+      return fetch(`https://restcountries.eu/rest/v2/name/${data.country}`);
     })
+    .then(res => {
+      if (!res.ok) throw new Error(`Country not fount (${response.status})`);
 
-    .then(data => renderCountry(data, 'neighbour'))
-    .catch(err => {
-      console.log(`${err}`);
-      renderError(`Something went wrong ${err.message} try again!`);
+      return res.json();
     })
-    .finally(() => {
-      countriesContainer.style.opacity = 1;
-    });
+    .then(data => renderCountry(data[0]))
+    .catch(err => console.error(`${err.message} 🔥`));
 };
-
-// getCountryData('portugal');
-// getCountryData('germany');
-// getCountryData('serbia');
-
-btn.addEventListener('click', function () {
-  getCountryData('portugal');
-});
-
-getCountryData('australia');
+whereAmI(52.508, 13.381);
+whereAmI(19.037, 72.823);
+whereAmI(-33.933, 18.474);
