@@ -1,17 +1,16 @@
-/*
-Importing module
-import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
-addToCart('bread', 5);
-console.log(price, tq);
+// Importing module
+// import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
+// addToCart('bread', 5);
+// console.log(price, tq);
 
 console.log('importing module');
-console.log(shipingCost);
+// console.log(shipingCost);
 
-import * as ShoppingCart from './shoppingCart.js';
-ShoppingCart.addToCart('bread', 5);
-console.log(ShoppingCart.totalPrice);
-import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
-console.log(price);
+// import * as ShoppingCart from './shoppingCart.js';
+// ShoppingCart.addToCart('bread', 5);
+// console.log(ShoppingCart.totalPrice);
+// import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
+// console.log(price);
 
 import add, { cart } from './shoppingCart.js';
 add('pizza', 2);
@@ -20,6 +19,7 @@ add('apples', 4);
 
 console.log(cart);
 
+/*
 const ShoppingCart2 = (function () {
   const cart = [];
   const shippingCost = 10;
@@ -50,19 +50,20 @@ ShoppingCart2.addToCart('pizza', 2);
 console.log(ShoppingCart2);
 console.log(ShoppingCart2.shippingCost);
 
-// Export
+Export
 export.addToCart = function (product, quantity) {
     cart.push({ product, quantity });
     console.log(
         `${quantity} ${product} added to cart (shipping cost is ${shippingCost})`
     );
 };
-    
-// Import
+
+Import
 const {addToCart} = require('./shoppingCart.js')
 */
 
-import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+// import cloneDeep from 'loadash-es';
+import cloneDeep from 'lodash-es';
 
 const state = {
   cart: [
@@ -78,3 +79,7 @@ state.user.loggedIn = false;
 console.log(stateClone);
 
 console.log(stateDeepClone);
+
+if (module.hot) {
+  module.hot.accept();
+}
