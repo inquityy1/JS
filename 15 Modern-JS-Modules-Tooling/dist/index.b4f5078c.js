@@ -477,7 +477,43 @@ if (module.hot) {
   module.hot.accept();
 }
 
-},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./shoppingCart.js":"61EPh","lodash-es":"MQOjj"}],"5gA8y":[function(require,module,exports) {
+},{"./shoppingCart.js":"61EPh","lodash-es":"MQOjj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"61EPh":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "cart", function () {
+  return cart;
+});
+_parcelHelpers.export(exports, "addToCart", function () {
+  return addToCart;
+});
+_parcelHelpers.export(exports, "totalPrice", function () {
+  return totalPrice;
+});
+_parcelHelpers.export(exports, "tq", function () {
+  return totalQuantity;
+});
+// Exporting module
+console.log('exporting module');
+const shipingCost = 10;
+const cart = [];
+const addToCart = function (product, quantity) {
+  cart.push({
+    product,
+    quantity
+  });
+  console.log(`${quantity} ${product} added to cart`);
+};
+const totalPrice = 237;
+const totalQuantity = 23;
+exports.default = function (product, quantity) {
+  cart.push({
+    product,
+    quantity
+  });
+  console.log(`${quantity} ${product} added to cart`);
+};
+
+},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
 "use strict";
 
 exports.interopDefault = function (a) {
@@ -519,43 +555,7 @@ exports.export = function (dest, destName, get) {
     get: get
   });
 };
-},{}],"61EPh":[function(require,module,exports) {
-var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-_parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "cart", function () {
-  return cart;
-});
-_parcelHelpers.export(exports, "addToCart", function () {
-  return addToCart;
-});
-_parcelHelpers.export(exports, "totalPrice", function () {
-  return totalPrice;
-});
-_parcelHelpers.export(exports, "tq", function () {
-  return totalQuantity;
-});
-// Exporting module
-console.log('exporting module');
-const shipingCost = 10;
-const cart = [];
-const addToCart = function (product, quantity) {
-  cart.push({
-    product,
-    quantity
-  });
-  console.log(`${quantity} ${product} added to cart`);
-};
-const totalPrice = 237;
-const totalQuantity = 23;
-exports.default = function (product, quantity) {
-  cart.push({
-    product,
-    quantity
-  });
-  console.log(`${quantity} ${product} added to cart`);
-};
-
-},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"MQOjj":[function(require,module,exports) {
+},{}],"MQOjj":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "add", function () {
