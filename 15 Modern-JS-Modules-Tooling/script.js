@@ -1,23 +1,24 @@
-// Importing module
-// import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
-// addToCart('bread', 5);
-// console.log(price, tq);
+/*
+Importing module
+import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
+addToCart('bread', 5);
+console.log(price, tq);
 
-// console.log('importing module');
-// console.log(shipingCost);
+console.log('importing module');
+console.log(shipingCost);
 
-// import * as ShoppingCart from './shoppingCart.js';
-// ShoppingCart.addToCart('bread', 5);
-// console.log(ShoppingCart.totalPrice);
-// import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
-// console.log(price);
+import * as ShoppingCart from './shoppingCart.js';
+ShoppingCart.addToCart('bread', 5);
+console.log(ShoppingCart.totalPrice);
+import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
+console.log(price);
 
-// import add, { cart } from './shoppingCart.js';
-// add('pizza', 2);
-// add('bread', 5);
-// add('apples', 4);
+import add, { cart } from './shoppingCart.js';
+add('pizza', 2);
+add('bread', 5);
+add('apples', 4);
 
-// console.log(cart);
+console.log(cart);
 
 const ShoppingCart2 = (function () {
   const cart = [];
@@ -48,3 +49,15 @@ ShoppingCart2.addToCart('apple', 4);
 ShoppingCart2.addToCart('pizza', 2);
 console.log(ShoppingCart2);
 console.log(ShoppingCart2.shippingCost);
+*/
+
+// Export
+export.addToCart = function (product, quantity) {
+    cart.push({ product, quantity });
+    console.log(
+        `${quantity} ${product} added to cart (shipping cost is ${shippingCost})`
+    );
+};
+
+// Import
+const {addToCart} = require('./shoppingCart.js')
